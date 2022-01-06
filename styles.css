@@ -50,8 +50,32 @@ body{
     z-index: 10;
     transform: translateX(-50%) rotate(calc(var(--rotation) *1deg));
 }
+
+.clock::after{
+    content:'';
+    position: absolute;
+    background-color: blue;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .clock .hand.second{
-    width: 5px;
+    width: 4px;
     height: 45%;
     background-color:blue;
+}
+
+.clock .hand.minute{
+    width: 8px;
+    height: 40%;
+    background-color:red;
+}
+
+.clock .hand.hour{
+    width: 10px;
+    height: 35%;
+    background-color:black;
 }
