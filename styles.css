@@ -38,3 +38,20 @@ body{
 .clock .number10{ --rotation: 300deg; }
 .clock .number11{ --rotation: 330deg; }
 
+.clock .hand{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) *1deg));
+}
+.clock .hand.second{
+    width: 5px;
+    height: 45%;
+    background-color:blue;
+}
